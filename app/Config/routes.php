@@ -33,6 +33,7 @@
 	Router::connect('/paginas/*', array('controller' => 'pages', 'action' => 'display'));
 
 	Router::connect('/sobre', array('controller' => 'pages', 'action' => 'display', 'sobre-o-evento'));
+	Router::connect('/sobre-o-evento', array('controller' => 'pages', 'action' => 'display', 'sobre-o-evento'));
 	Router::connect('/local', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
 	Router::connect('/como-chegar', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
 	Router::connect('/inscricao', array('controller' => 'pages', 'action' => 'display', 'inscricao'));
