@@ -10,15 +10,20 @@
 <body>
 	<div id="container">
 		<header class="sixteen columns alpha omega row">
-			<?php echo $this->Element('topo'); ?>	<!-- Inserindo o Elemento topo -->
-			<?php echo $this->Element('menu-nav'); ?>	<!-- Insindo o Elemento menu -->
+			<!-- inserindo o logo -->
+			<?php echo $this->Html->image('logo.png', array('class'=>'logo' , 'alt'=> 'logo')); ?> 
+			
+			<!-- Insindo o Elemento menu -->
+			<?php echo $this->Element('menu-nav'); ?>
 		</header>
 		
 		<div id="content" class="sixteen columns row">
 			<div class="heading row">
-				<h2><?php echo $title_for_layout ?></h2>	<!-- Titulo da view  -->
+				<!-- Titulo da view  -->
+				<h2><?php echo $title_for_layout ?></h2>
 			</div>
-			<?php echo $this->fetch('content'); ?>	<!-- Especificação de onde o CakePHP irá inserir o conteúdo da view -->
+			<!-- Especificação de onde o CakePHP irá inserir o conteúdo da view -->
+			<?php echo $this->fetch('content'); ?>
 		</div>
 		
 		<footer class="sixteen columns omega bordas">
