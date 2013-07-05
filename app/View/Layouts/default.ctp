@@ -4,19 +4,19 @@
 	<meta charset="utf-8" />
 	<?php echo $this->Html->charset(); ?>
 	<title><?php echo $title_for_layout." - Seminário Alliance JiuJitsu"; ?></title>
-	<?php echo $this->Html->css('style'); ?>
+	<?php echo $this->Html->css('style'); ?>	<!-- Inserindo o estilo -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="container">
 		<header class="sixteen columns alpha omega row">
-			<?php echo $this->Element('topo'); ?>	<!-- Elemento topo -->
-			<?php echo $this->Element('menu-nav'); ?>	<!-- Elemento menu-nav -->
+			<?php echo $this->Element('topo'); ?>	<!-- Inserindo o Elemento topo -->
+			<?php echo $this->Element('menu-nav'); ?>	<!-- Insindo o Elemento menu -->
 		</header>
 		
 		<div id="content" class="sixteen columns row">
 			<div class="heading row">
-				<h2><?php echo $title_for_layout ?></h2>	<!-- Heading -->
+				<h2><?php echo $title_for_layout ?></h2>	<!-- Titulo da view  -->
 			</div>
 			<?php echo $this->fetch('content'); ?>	<!-- Especificação de onde o CakePHP irá inserir o conteúdo da view -->
 		</div>
@@ -26,6 +26,8 @@
 			<h3>Curso de CakePHP - <a href="http://assando-sites.com.br">assando-sites</a></h3>
 		</footer>
 	</div>
+
+<!-- JS do Analytics -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
