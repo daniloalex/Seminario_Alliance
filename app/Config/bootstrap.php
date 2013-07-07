@@ -107,3 +107,18 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+/**
+*	Regras do português
+**/
+Inflector::rules('singular', array(
+	'rules' => array('/^(.*)(oes|aes|aos)$/i' => '\1ao',),	// regra
+	'irregular' => array('perfis' => 'perfil',),
+	'uninflected' => array()
+));
+
+Inflector::rules('plural', array(
+	'rules' => array('/^(.*)ao$/i' => '\1oes',),	//regra
+	'irregular' => array('perfil' => 'perfis','pao' => 'paes'),
+	'uninflected' => array()
+));

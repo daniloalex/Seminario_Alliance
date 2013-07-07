@@ -36,7 +36,7 @@
 	Router::connect('/sobre-o-evento', array('controller' => 'pages', 'action' => 'display', 'sobre-o-evento'));
 	Router::connect('/local', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
 	Router::connect('/como-chegar', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
-	Router::connect('/inscricao', array('controller' => 'pages', 'action' => 'display', 'inscricao'));
+	Router::connect('/inscricao', array('controller' => 'pages', 'action' => 'display', 'inscrever'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
