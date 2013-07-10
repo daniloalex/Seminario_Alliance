@@ -1,0 +1,1 @@
+<?php echo "Obrigado pela inscrição!" ?>

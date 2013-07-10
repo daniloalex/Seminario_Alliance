@@ -31,6 +31,6 @@
 		</footer>
 	</div>
 <!-- JS do Analytics -->
-<?php echo $this->Html->script(array('analytics.js')); ?>
+<?php echo $this->Html->script('analytics.js'); ?>
 </body>
 </html>
