@@ -1,7 +1,7 @@
 <?php
-	class palestra extends appModel{
-		//Cada palestra é dada por um palestrante.
-		public $hasOne = array('Palestrante');
+	class palestrante extends appModel{
+		//Um palestrante pode realizar várias palestras:
+		public $hasMany = array('Palestra');
 
 		//Regras de validação:
 		public $validate = array(
@@ -13,10 +13,9 @@
 				'rule' => 'notEmpty',	//Não vazio.
 				'message' => 'Preencha a Descricao.'
 			),
-			'Inicio' => array(
-				'rule' => 'date',	//Data válida.
-				'message' => 'Preencha uma data valida.',
-				'allowEmpty' => true 	//Permite vazio
+			'Site' => array(
+				'rule' => 'url',	// url válida.
+				'message' => 'Preencha uma url valida.'
 			)
 		);
 	}
