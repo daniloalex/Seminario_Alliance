@@ -1,9 +1,9 @@
 <?php
 	class InscricoesController extends AppController {
-		//public $uses = array('Inscricao');	//Usei Inflections
+		//public $uses = array('Inscricao');	//diz ao Cake qual é o Model que o controller vai buscar. Comentado pq usei Inflections.
+	
 		public function inscrever() {
-			// Exibe automaticamente a view:
-			// /View/Inscricoes/inscrever.ctp
+			// Exibe automaticamente a view: /iew/Inscricoes/inscrever.ctp
 			$isPost = $this->request->is('post');
 
 			// Se é um POST e dados do formulário não vazio
@@ -19,8 +19,7 @@
 			}
 		}
 		public function obrigado() {
-			// Exibe automaticamente a view:
-			// /View/Inscricoes/obrigado.ctp
+			// Exibe automaticamente a view: /View/Inscricoes/obrigado.ctp
 		}
 		public function confirme(){
 			// Exibe automaticamente a view: 
