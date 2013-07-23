@@ -3,9 +3,9 @@
 		//public $uses = array('Inscricao');	//diz ao Cake qual é o Model que o controller vai buscar. Comentado pq usei Inflections.
 	
 		public function inscrever() {
-			// Exibe automaticamente a view: /iew/Inscricoes/inscrever.ctp
-			$isPost = $this->request->is('post');
+			// Exibe automaticamente a view: /view/Inscricoes/inscrever.ctp
 
+			$isPost = $this->request->is('post');
 			// Se é um POST e dados do formulário não vazio
 			if ($isPost && !empty($this->request->data)) {
 				// Tente salvar os dados da inscricao
@@ -22,8 +22,7 @@
 			// Exibe automaticamente a view: /View/Inscricoes/obrigado.ctp
 		}
 		public function confirme(){
-			// Exibe automaticamente a view: 
-			// /View/Inscricoes/confirme.ctp
+			// Exibe automaticamente a view: /View/Inscricoes/confirme.ctp
 		}
 	}
 ?>
