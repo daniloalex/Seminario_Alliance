@@ -6,18 +6,18 @@ CREATE TABLE `inscricoes` (
 `email` VARCHAR(100) NOT NULL,
 `telefone` CHAR(10) NOT NULL,
 `endereco` VARCHAR(100) NOT NULL,
-`created` DATETIME,
-`updated` DATETIME
+`created` DATE DEFAULT NULL,
+`updated` DATE DEFAULT NULL
 );
 
 CREATE TABLE `palestras` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `nome` VARCHAR(50) NOT NULL,
 `descricao` VARCHAR(500) NOT NULL,
-`inicio` DATETIME DEFAULT NULL,
-`fim` DATETIME DEFAULT NULL,
-`created` DATETIME DEFAULT NULL,
-`updated` DATETIME DEFAULT NULL,
+`inicio` TIME DEFAULT NULL,
+`fim` TIME DEFAULT NULL,
+`created` DATE DEFAULT NULL,
+`updated` DATE DEFAULT NULL,
 `palestrante_id` INT UNSIGNED NOT NULL
 );
 
@@ -26,13 +26,13 @@ CREATE TABLE `palestrantes` (
 `nome` VARCHAR(50) NOT NULL,
 `descricao` VARCHAR(500) NOT NULL,
 `site` VARCHAR(50),
-`created` TIME DEFAULT NULL,
-`updated` TIME DEFAULT NULL,
+`created` DATE DEFAULT NULL,
+`updated` DATE DEFAULT NULL,
 `palestra_id` INT UNSIGNED NOT NULL
 );
 
 GRANT ALL PRIVILEGES 
        ON curso.*
        TO 'curso'@'localhost'
-       IDENTIFIED BY '12345' 
+       IDENTIFIED BY '12345'
        WITH GRANT OPTION;
