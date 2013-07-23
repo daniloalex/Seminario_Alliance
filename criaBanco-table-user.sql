@@ -26,8 +26,8 @@ CREATE TABLE `palestrantes` (
 `nome` VARCHAR(50) NOT NULL,
 `descricao` VARCHAR(500) NOT NULL,
 `site` VARCHAR(50),
-`created` DATETIME DEFAULT NULL,
-`updated` DATETIME DEFAULT NULL,
+`created` TIME DEFAULT NULL,
+`updated` TIME DEFAULT NULL,
 `palestra_id` INT UNSIGNED NOT NULL
 );
 

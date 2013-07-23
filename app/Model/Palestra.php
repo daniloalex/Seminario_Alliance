@@ -14,12 +14,12 @@ class Palestra extends appModel{
 			'message' => 'Preencha a Descricao.'
 		),
 		'Inicio' => array(
-			'rule' => 'date', 	// ALTERAR PARA FORMATO HH:MM.................
+			'rule' => 'time'	//HH:MM
 			'message' => 'Preencha uma data valida.',
 			'allowEmpty' => true
 		)
 		'Fim' => array(
-			'rule' => 'date',	// ALTERAR PARA FORMATO HH:MM.................
+			'rule' => 'time'	//HH:MM
 			'message' => 'Preencha uma data valida.',
 			'allowEmpty' => true
 		)
