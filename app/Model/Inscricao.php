@@ -6,21 +6,25 @@ class Inscricao extends AppModel{
 	
 	// Regra de validação:
 	public $validate = array(
-		'Nome' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Preencha o Nome'
-		),
-		'Email' => array(
+		'nome' => array(
 			'preenchido' => array(
 				'rule' => 'notEmpty',
-				'message' => 'Preencha o Email'
+				'message' => 'Preencha o Nome',
+				'require' => true
+			)
+		),
+		'email' => array(
+			'preenchido' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Preencha o Email',
+				'require' => true
 			),
 			'emailValido' => array(
-				'rule' => 'url',
+				'rule' => 'email',
 				'message' => 'Email inválido'
 			)
 		),
-		'Telefone' => array(
+		'telefone' => array(
 			'preenchido' => array(
 				'rule' => 'notEmpty',
 				'message' => 'Preencha o Telefone'
@@ -30,14 +34,14 @@ class Inscricao extends AppModel{
 				'message'=> 'São permitidos apenas números'
 			)
 		),
-		'Endereco' => array(
+		'endereco' => array(
 			'preenchido' => array(
 				'rule' => 'notEmpty',
 				'message' => 'Preencha o Endereço'
 			),
 			'minimo10' => array(
-				'rule' => 'minLength(10)',
-				'message' => 'Mínimo 10 caracteres'
+				'rule' => array('minLength', 10),
+				'message' => 'Digite no mínimo 10 caracteres'
 			)
 		)
 	);

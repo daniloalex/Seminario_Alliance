@@ -1,0 +1,1 @@
+﻿<?php echo "Palestra inserida com sucesso. Obrigado!" ?>

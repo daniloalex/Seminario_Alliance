@@ -31,6 +31,8 @@ CREATE TABLE `palestrantes` (
 `palestra_id` INT UNSIGNED NOT NULL
 );
 
+CREATE USER 'curso'@'localhost' IDENTIFIED BY PASSWORD '123456';
+
 GRANT ALL PRIVILEGES 
        ON curso.*
        TO 'curso'@'localhost'

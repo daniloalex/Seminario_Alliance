@@ -1,0 +1,1 @@
+﻿<?php echo "Cadastro de Palestrante efetuado com sucesso. Obrigado!" ?>

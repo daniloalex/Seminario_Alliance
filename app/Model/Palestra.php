@@ -1,25 +1,25 @@
 <?php
-class Palestra extends appModel{
-	//Cada palestra é dada por um palestrante.
-	public $hasOne = array('Palestrante');
+class Palestra extends AppModel{
+	
+	public $hasOne = array('Palestrante');	//Cada palestra é dada por um palestrante.
 	
 	//Regras de validação:
 	public $validate = array(
-		'Nome' => array(
+		'nome' => array(
 			'rule' => 'notEmpty',
 			'message' => 'Preencha o Nome.'
 		),
-		'Descricao' => array(
+		'descricao' => array(
 			'rule' => 'notEmpty',
 			'message' => 'Preencha a Descricao.'
 		),
-		'Inicio' => array(
-			'rule' => 'time'	//HH:MM
+		'inicio' => array(
+			'rule' => 'time',	//HH:MM
 			'message' => 'Preencha uma data valida.',
 			'allowEmpty' => true
-		)
-		'Fim' => array(
-			'rule' => 'time'	//HH:MM
+		),
+		'fim' => array(
+			'rule' => 'time',	//HH:MM
 			'message' => 'Preencha uma data valida.',
 			'allowEmpty' => true
 		)
