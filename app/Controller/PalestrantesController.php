@@ -19,8 +19,12 @@
 			//Exibe automaticamente a view: /View/Palestrantes/listar.ctp
 		}
 
-		public function sucesso(){}
+		public function sucesso(){
+			//Exibe automaticamente a view: /View/Palestrantes/sucesso.ctp
+		}
 		
-		public function confirme(){}
+		public function confirme(){
+			//Exibe automaticamente a view: /View/Palestrantes/confirme.ctp
+		}
 	}
 ?>

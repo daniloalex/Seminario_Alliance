@@ -4,6 +4,6 @@
 		echo $this->Form->input('descricao');
 		echo $this->Form->input('inicio');
 		echo $this->Form->input('fim');
-		echo $this->Form->input('palestrante_id');		//Não está listando... Verificar!!!
+		echo $this->Form->input('palestrante_id');
 	echo $this->Form->end('Enviar');
 ?>

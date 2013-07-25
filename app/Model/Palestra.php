@@ -22,6 +22,10 @@ class Palestra extends AppModel{
 			'rule' => 'time',	//HH:MM
 			'message' => 'Preencha uma data valida.',
 			'allowEmpty' => true
+		),
+		'palestrante_id' => array(
+			'rule' => 'notEmpty',
+			'required' => true
 		)
 	);
 }
