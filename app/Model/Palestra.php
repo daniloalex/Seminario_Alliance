@@ -1,7 +1,7 @@
 <?php
 class Palestra extends AppModel{
-	
-	public $hasOne = array('Palestrante');	//Cada palestra é dada por um palestrante.
+	//Cada palestra é dada por um palestrante.
+	public $hasOne = array('Palestrante');	
 	
 	//Regras de validação:
 	public $validate = array(

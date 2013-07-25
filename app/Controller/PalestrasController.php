@@ -6,6 +6,7 @@
 			//Exibe automaticamente a view: /View/Palestrantes/inscrever.ctp
 
 			$isPost = $this->request->is('post');
+			
 			if($isPost && !empty($this->request->data)){				
 				if($this->Palestra->save($this->request->data)){
 					echo $this->redirect(array('controller' => 'Palestras', 'action' => 'sucesso'));
@@ -13,6 +14,10 @@
 					echo $this->redirect(array('controller' => 'Palestras', 'action' => 'confirme'));
 				}
 			}
+			
+			//Regra para exibir os id dos palestrantes em /View/Palestras/inscrever.ctp 
+			$palestrantes = $this->Palestra->Palestrante->find('list');
+			$this->set(compact('palestrantes'));
 		}
 
 		public function listar(){

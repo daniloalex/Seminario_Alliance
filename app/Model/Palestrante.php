@@ -1,7 +1,7 @@
 <?php
 class Palestrante extends AppModel{
-	
-	public $hasMany = array('Palestra');	//Um palestrante pode realizar várias palestras:
+	//Um palestrante pode realizar uma ou várias palestras:
+	public $hasMany = array('Palestra');
 
 	//Regras de validação:
 	public $validate = array(
