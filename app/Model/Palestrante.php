@@ -2,7 +2,7 @@
 class Palestrante extends AppModel{
 	//Um palestrante pode realizar uma ou várias palestras:
 	public $hasMany = array('Palestra');
-
+	
 	//Regras de validação:
 	public $validate = array(
 		'nome' => array(

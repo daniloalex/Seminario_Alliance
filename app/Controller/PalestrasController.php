@@ -22,6 +22,17 @@
 
 		public function listar(){
 			//Exibe automaticamente a view: /View/Palestras/listar.ctp
+
+			//Parametros para a busca de todas as Palestras
+			$params = array(
+				'fields' => array('Palestra.nome', 'Palestra.inicio', 'Palestra.fim', 'Palestra.descricao'),
+				'order' => array('Palestra.inicio' => 'ASC')
+				);
+			//Busca todas as Palestras
+			$allPalestras = $this->Palestra->find('all',$params);
+
+			//Manda para a View
+			$this->set('palestras', $allPalestras);
 		}
 
 		public function sucesso(){
