@@ -38,5 +38,12 @@
 		public function confirme(){
 			//Exibe automaticamente a view: /View/Palestrantes/confirme.ctp
 		}
+
+		public function view($id){
+			$this->Palestrante->id = $id;
+			$dados = $this->Palestrante->read();
+
+			$this->set('palestrante', $dados);
+		}
 	}
 ?>

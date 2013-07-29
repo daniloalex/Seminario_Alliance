@@ -33,11 +33,24 @@
 	Router::connect('/paginas/*', array('controller' => 'pages', 'action' => 'display'));
 	
 	Router::connect('/sobre', array('controller' => 'pages', 'action' => 'display', 'sobre-o-evento'));
-	Router::connect('/sobre-o-evento', array('controller' => 'pages', 'action' => 'display', 'sobre-o-evento'));
+	
 	Router::connect('/local', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
+	
 	Router::connect('/como-chegar', array('controller' => 'pages', 'action' => 'display', 'como-chegar'));
 	
 	Router::connect('/inscricao', array('controller' => 'inscricoes', 'action' => 'inscrever'));
+	
+	Router::connect('/palestras', array('controller' => 'palestras', 'action' => 'listar'));
+	
+	Router::connect('/palestrantes', array('controller' => 'palestrantes', 'action' => 'listar'));
+
+	Router::connect('/palestrante/:nome/:id', array('controller' => 'palestrantes',	'action' => 'view'), 
+		array(
+			'pass' => array('id'), //Passa o ID para a action.
+			'nome' => '[a-z0-9-]+',
+			'id' => '[0-9]+'
+		));
+
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

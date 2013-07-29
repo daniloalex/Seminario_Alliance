@@ -11,6 +11,12 @@
 	<?php foreach($palestras as $var): ?>
 		<tr>
 			<td><?php echo $var['Palestra']['nome']; ?></td>
+
+			<td><?php $slug = Inflector::slug(strtolower($var['Palestra']['nome']), '-');
+				echo $this->Html->link($var['Palestrante']['nome'],'/palestrante/'.$slug.'/'.$var['Palestra']['palestrante_id']);
+				?>
+			</td>
+
 			<td><?php echo $var['Palestra']['inicio']; ?></td>
 			<td><?php echo $var['Palestra']['fim']; ?></td>
 			<td><?php echo $var['Palestra']['descricao']; ?></td>
